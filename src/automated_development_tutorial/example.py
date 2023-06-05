@@ -24,7 +24,7 @@ def sumOfPrimes(max: int) -> int:
     return total
 
 
-def fibonacci(max: int) -> list[int]:
+def fibonacci(max: int) -> list:
     """
     return fibonacci sequence up to and including :param max:.
 
