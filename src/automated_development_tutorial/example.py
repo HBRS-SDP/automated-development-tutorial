@@ -1,6 +1,3 @@
-import math
-
-
 def sumOfPrimes(max: int) -> int:
     """
     return sum of all prime numbers up to and including :param max:.
@@ -13,19 +10,18 @@ def sumOfPrimes(max: int) -> int:
     total = 0
     is_prime = [True] * (max + 1)
     s = 2
-    while s*s <= max:
+    while s * s <= max:
         if is_prime[s]:
-            s_mul = s*2
+            s_mul = s * 2
             while s_mul <= max:
                 is_prime[s_mul] = False
-                s_mul +=s
-        s+=1
+                s_mul += s
+        s += 1
     total = 0
-    for i in range(2, max+1):
+    for i in range(2, max + 1):
         if is_prime[i]:
             total += i
     return total
-
 
 
 def fibonacci(max: int) -> list[int]:
@@ -39,17 +35,17 @@ def fibonacci(max: int) -> list[int]:
     """
     if max < 1:
         return []
-    elif max <2:
+    elif max < 2:
         return [1]
     else:
         first = 1
-        second=1
+        second = 1
         results = []
         while second <= max:
             results.append(first)
-            next= first+second
+            next = first + second
             first = second
-            second =next
+            second = next
         results.append(first)
 
         return results
